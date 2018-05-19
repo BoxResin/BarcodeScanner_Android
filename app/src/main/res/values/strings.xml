@@ -1,0 +1,5 @@
+<!-- 문자열 리소스 -->
+<resources>
+	<!-- 앱 이름 -->
+	<string name = "app_name">바코드 스캐너</string>
+</resources>
