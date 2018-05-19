@@ -23,7 +23,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: 빌드
-          command: ./gradlew :app:generateDebugSources :app:compileDebugSources :app:mockableAndroidJar :app:compileDebugUnitTestSources
+          command: ./gradlew assemble
       - run:
           name: 테스트
           command: ./gradlew lint test
