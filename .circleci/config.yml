@@ -12,6 +12,9 @@ jobs:
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
+          name: gradlew 권한 부여
+          command: sudo chmod +x ./gradlew
+      - run:
           name: 의존성 다운로드
           command: ./gradlew androidDependencies
       - save_cache:
