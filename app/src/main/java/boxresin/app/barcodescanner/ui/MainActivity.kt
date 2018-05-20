@@ -1,7 +1,8 @@
-package boxresin.app.barcodescanner
+package boxresin.app.barcodescanner.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import boxresin.app.barcodescanner.R
 
 
 /** 메인 액티비티 */
