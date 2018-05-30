@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 'android-P'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+// 의존성
+dependencies {
+    // 로컬 JAR
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 코틀린
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha2'
+
+    // 테스트
+    testImplementation 'junit:junit:4.12'
+}
